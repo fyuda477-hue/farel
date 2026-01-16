@@ -1,0 +1,336 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #fbd3e9, #bb377d);
+    color: #333;
+}
+
+/* PEMBUKA */
+.opening {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.open-card {
+    background: rgba(255,255,255,0.92);
+    padding: 45px;
+    border-radius: 35px;
+    max-width: 420px;
+    text-align: center;
+}
+
+.small-text {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* TOMBOL */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 32px;
+    background: #bb377d;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+/* CERITA */
+header {
+    text-align: center;
+    padding: 50px 20px 20px;
+}
+
+.timeline {
+    padding: 20px;
+}
+
+.item {
+    background: white;
+    margin: 25px auto;
+    padding: 28px;
+    max-width: 520px;
+    border-radius: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+/* GALERI FOTO */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.gallery img {
+    width: 200px;
+    border-radius: 20px;
+}
+
+/* SURAT */
+.letter-page {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.letter-box {
+    background: rgba(255,255,255,0.95);
+    padding: 45px;
+    max-width: 620px;
+    border-radius: 35px;
+    line-height: 1.9;
+}
+
+.end {
+    margin-top: 35px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ANIMASI */
+.fade-up {
+    animation: fadeUp 2s;
+}
+
+.fade-slow {
+    animation: fadeSlow 3s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlow {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 🌻 BUNGA MATAHARI MELAYANG */
+.flowers {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.flowers span {
+    position: absolute;
+    bottom: -50px;
+    font-size: 30px;
+    animation: floatUp linear infinite;
+    opacity: 0.6;
+}
+
+/* posisi & kecepatan acak */
+.flowers span:nth-child(1) {
+    left: 10%;
+    animation-duration: 18s;
+    font-size: 26px;
+}
+.flowers span:nth-child(2) {
+    left: 25%;
+    animation-duration: 22s;
+    font-size: 32px;
+}
+.flowers span:nth-child(3) {
+    left: 45%;
+    animation-duration: 20s;
+    font-size: 28px;
+}
+.flowers span:nth-child(4) {
+    left: 65%;
+    animation-duration: 24s;
+    font-size: 34px;
+}
+.flowers span:nth-child(5) {
+    left: 80%;
+    animation-duration: 19s;
+    font-size: 27px;
+}
+.flowers span:nth-child(6) {
+    left: 90%;
+    animation-duration: 26s;
+    font-size: 30px;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+/* Background foto kecil */
+.photo-bg {
+    position: absolute; /* BUKAN fixed */
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    display: grid;
+    grid-template-columns: 1fr minmax(420px, 520px) 1fr;
+    padding: 40px 30px;
+}
+
+/* kolom foto */
+.photo-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px;
+    align-content: start;
+}
+
+/* foto */
+.photo-column img {
+    width: 78px;
+    height: 78px;
+    object-fit: cover;
+    border-radius: 16px;
+    animation: float 18s infinite ease-in-out;
+}
+
+/* animasi */
+@keyframes float {
+    0%   { transform: translateY(0) rotate(var(--r)); }
+    50%  { transform: translateY(-25px) rotate(var(--r)); }
+    100% { transform: translateY(0) rotate(var(--r)); }
+}
+
+
+/* FOTO */
+.photo-column img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 16px;
+    animation: float 18s infinite ease-in-out;
+}
+
+/* rotasi acak biar berhamburan */
+.photo-column img:nth-child(odd) {
+    transform: rotate(-6deg);
+}
+.photo-column img:nth-child(even) {
+    transform: rotate(6deg);
+}
+
+/* animasi lembut */
+@keyframes float {
+    0%   { transform: translateY(0) rotate(var(--r)); }
+    50%  { transform: translateY(-35px) rotate(var(--r)); }
+    100% { transform: translateY(0) rotate(var(--r)); }
+}
+
+
+/* FOTO KIRI & KANAN SAJA */
+.photo-bg img {
+    position: absolute;
+    width: 78px;
+    height: 78px;
+    object-fit: cover;
+    border-radius: 14px;
+    animation: float 20s infinite ease-in-out;
+}
+
+/* KIRI */
+.photo-bg img.left {
+    left: 3%;
+}
+
+/* KANAN */
+.photo-bg img.right {
+    right: 3%;
+}
+
+/* ANIMASI */
+@keyframes float {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-40px); }
+    100% { transform: translateY(0); }
+}
+
+.photo-bg img {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 14px;
+    animation: float 18s infinite ease-in-out;
+
+    /* POSISI ACAK */
+    top: calc(100% * var(--y));
+    left: calc(100% * var(--x));
+}
+
+/* Animasi */
+@keyframes float {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-35px); }
+    100% { transform: translateY(0); }
+}
+
+
+.photo-bg img {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 16px;
+    opacity: 1;
+    animation: float 18s infinite linear;
+}
+
+
+/* Posisi acak */
+.photo-bg img:nth-child(1) { top: 10%; left: 5%; animation-duration: 20s; }
+.photo-bg img:nth-child(2) { top: 30%; right: 10%; animation-duration: 22s; }
+.photo-bg img:nth-child(3) { bottom: 15%; left: 20%; animation-duration: 19s; }
+.photo-bg img:nth-child(4) { bottom: 25%; right: 15%; animation-duration: 24s; }
+.photo-bg img:nth-child(5) { top: 50%; left: 50%; animation-duration: 21s; }
+
+/* Animasi melayang */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-40px) rotate(5deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}

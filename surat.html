@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Untuk Kamu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="letter-page">
+
+<audio id="music">
+    <source src="mp3.mp3" type="audio/mpeg">
+</audio>
+
+<div class="letter-box fade-slow">
+    <h2>Hai Sayangg…</h2>
+
+    <p>
+        Terima kasih sudah hadir di hidupku.<br>
+        Terima kasih sudah memilih tetap ada.
+    </p>
+
+    <p>
+        Aku mungkin tidak sempurna,<br>
+        tapi aku selalu berusaha jadi yang terbaik.
+    </p>
+
+    <p>
+        semoga kita selalu bersama kedepanya.<br>
+        tetap jadi jannah yang saya kenal ya sayangggku
+    </p>
+
+    <p class="end">
+        Happy Birthday<br>
+          sayangggku<br>
+          ❤️❤️❤️❤️❤️
+    </p>
+    <div class="photo-bg">
+    <div class="photo-column">
+        <img src="j9.jpeg" style="--r:-6deg">
+        <img src="j10.jpeg" style="--r:5deg">
+        <img src="j11.jpeg" style="--r:-7deg">
+        <img src="j12.jpeg" style="--r:6deg">
+        <!-- dst -->
+    </div>
+
+    <div></div> <!-- TENGAH KOSONG -->
+
+    <div class="photo-column">
+        <img src="j1.jpeg" style="--r:6deg">
+        <img src="j14.jpeg" style="--r:-5deg">
+        <img src="j5.jpeg" style="--r:7deg">
+        <img src="f4.jpeg" style="--r:-6deg">
+        <!-- dst -->
+</div>
+<script>
+const music = document.getElementById("music");
+
+music.currentTime = parseFloat(localStorage.getItem("musicTime")) || 0;
+music.play().catch(() => {});
+
+setInterval(() => {
+    localStorage.setItem("musicTime", music.currentTime);
+}, 400);
+
+</script>
+<div class="flowers">
+    <span>🌻</span>
+    <span>🌻</span>
+    <span>🌻</span>
+    <span>🌻</span>
+    <span>🌻</span>
+    <span>🌻</span>
+</div>
+
+</body>
+</html>

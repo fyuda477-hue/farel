@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Untuk Kamu 🤍</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="opening">
+
+<audio id="music">
+    <source src="mp3.mp3" type="audio/mpeg">
+</audio>
+
+<div class="open-card fade-slow">
+    <h3 class="small-text">27-01-2026</h3>
+    <h1>Happy Birthday sayangggku<br></h1>
+    <h3>❤️❤️</h3>
+    <p>
+        Ada cerita kecil yang ingin aku bagikan.<br>
+        Tentang kita.
+    </p>
+
+    <button class="btn" onclick="mulai()">
+        Masuk ke Cerita Kita →
+    </button>
+</div>
+
+<script>
+const music = document.getElementById("music");
+
+function mulai() {
+    music.play().catch(() => {});
+    localStorage.setItem("musicTime", music.currentTime);
+
+    setTimeout(() => {
+        window.location.href = "galerry.html";
+    }, 300);
+}
+
+</script>
+<div class="flowers">
+    <span>🌻</span>
+    <span>🌻</span>
+    <span>🌻</span>
+    <span>🌻</span>
+    <span>🌻</span>
+    <span>🌻</span>
+</div>
+
+</body>
+</html>

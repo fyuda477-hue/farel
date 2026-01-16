@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Hallo Sayangg Selamat Datang Di Web Sederhanaku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="music">
+    <source src="mp3.mp3" type="audio/mpeg">
+</audio>
+
+<header class="fade-up">
+    <h1>Hallo Sayangg Selamat Datang Di Web Sederhanaku</h1>
+    <h3> mungkin ini hanya web sederhana yang tiada harganya<br>
+        tapi ada Hal-hal yang selalu kuingat.<br></h3>
+    <p>ini adalah foto foto kita mulai awal kenalan sampai sekarang, walaupun tidak lengkap,
+tapi ini sangat berkesan.<br>
+</p>
+    
+</header>
+<!-- GALERI FOTO -->
+<section class="gallery fade-up">
+    <img src="g1.jpeg" alt="Kenangan 1">
+    <img src="g2.jpeg" alt="Kenangan 2">
+    <img src="g3.jpeg" alt="Kenangan 3">
+    <img src="ft2.jpeg" alt="Kenangan 1">
+    <img src="ft3.jpeg" alt="Kenangan 2">
+    <img src="ft5.jpeg" alt="Kenangan 3">
+    <img src="ft7.jpeg" alt="Kenangan 1">
+    <img src="ft8.jpeg" alt="Kenangan 2">
+    <img src="ft1.jpeg" alt="Kenangan 3">
+    <img src="ft4.jpeg" alt="Kenangan 1">
+    <img src="farel1.jpeg" alt="Kenangan 2">
+    <img src="g3.jpeg" alt="Kenangan 3">
+    <img src="f1.jpeg" alt="Kenangan 2">
+    <img src="f2.jpeg" alt="Kenangan 3">
+    <img src="f3.jpeg" alt="Kenangan 1">
+    <img src="f4.jpeg" alt="Kenangan 2">
+    <img src="f5.jpeg" alt="Kenangan 3">
+    <img src="f6.jpeg" alt="Kenangan 2">
+</section>
+
+</section>
+
+</section>
+
+</section>
+
+<div class="center fade-up">
+    <a href="kenangan.html" class="btn">
+        Lanjutkan →
+    </a>
+</div>
+
+<script>
+const music = document.getElementById("music");
+
+music.currentTime = parseFloat(localStorage.getItem("musicTime")) || 0;
+music.play().catch(() => {});
+
+setInterval(() => {
+    localStorage.setItem("musicTime", music.currentTime);
+}, 400);
+</script>
+<div class="flowers">
+    <span>🌻</span>
+    <span>🌻</span>
+    <span>🌻</span>
+    <span>🌻</span>
+    <span>🌻</span>
+    <span>🌻</span>
+</div>
+</body>
+</html>

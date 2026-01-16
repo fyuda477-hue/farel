@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Hallo Sayangg Selamat Datang Di Web Sederhanaku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<body>
+
+<div class="photo-bg">
+    <div class="photo-column">
+        <img src=".jpeg" style="--r:-6deg">
+        <img src="peg" style="--r:5deg">
+        <img src=".jpeg" style="--r:-7deg">
+        <img src=".jpeg" style="--r:6deg">
+        <!-- dst -->
+    </div>
+
+    <div></div> <!-- TENGAH KOSONG -->
+
+    <div class="photo-column">
+        <img src="j1.jpeg" style="--r:6deg">
+        <img src="j2.jpeg" style="--r:-5deg">
+        <img src="j3.jpeg" style="--r:7deg">
+        <img src="j4.jpeg" style="--r:-6deg">
+        <!-- dst -->
+    </div>
+</div>
+
+
+<audio id="music">
+    <source src="mp3.mp3" type="audio/mpeg">
+</audio>
+    <title> mau cerita sedikit</title>
+<div class="item">
+        <h3>Awal Bertemu</h3>
+        <p>
+            Kita bertemu tanpa rencana.<br>
+            aku kira pertemuan kita hanya sebatas kenal saja, tidak kusangka sampe sampai sejauh ini.
+            pada awalnya semua berjalan biasa saja, tapi setiap detik, menit, jam, hari, bulan,
+            aku merasa ada yang berbeda dalam hatiku.
+            Tidak selalu mudah,<br>
+            tapi saya memberanikan diri untuk mengungkapkan isi hatiku, mesti ada rasa dagdigdug,
+            tapi tetap kupaksakan entah apa hasilnyaa.
+            tidak kusangka tepat tanggal 18-12-2024 jdi hari paling bahagia untuk saya, 
+            dimana saya mendapatkan cintaa yang ku mau, tanpa paksaan maupun terpaksa. 
+        </p>
+    </div>
+
+    <div class="item">
+        <h3>Hari Ini 27-01-2026</h3>
+        <p>
+            Adalah jadi hari bahagianya sayangg.<br>
+            dimana hari ini adalah, hari dimana malaikat surga, melahirkan bidadari tak bersayap,
+            yang bernama (NAIMATUL JANNAH), seseorang perempuan hebat yang di lahirkan oleh perempuan hebat juga.
+            semoga di umur sayangg yang ke-20 tahun ini, bisa membanggakan keluarga, jadi orang yang berguna,sehatt selalu,
+            panjang umur, dilancarkan rezekinya, dilancarkan kuliahnyaa, pokoknya doa terbaik buat sayanggg❤️❤️
+        </p>
+    </div>
+</section>
+
+<div class="center fade-up">
+    <a href="surat.html" class="btn">
+        Lanjutkan →
+<script>
+const music = document.getElementById("music");
+
+music.currentTime = parseFloat(localStorage.getItem("musicTime")) || 0;
+music.play().catch(() => {});
+
+setInterval(() => {
+    localStorage.setItem("musicTime", music.currentTime);
+}, 400);
+
+</script>
+<div class="flowers">
+    <span>🌻</span>
+    <span>🌻</span>
+    <span>🌻</span>
+    <span>🌻</span>
+    <span>🌻</span>
+    <span>🌻</span>
+</div>
+
+</body>
+</html>
